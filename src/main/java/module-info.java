@@ -3,7 +3,7 @@ module com.example.keuanganmahasiswa {
     requires javafx.fxml;
     requires java.sql;
     requires javafx.graphics;
-    requires mysql.connector.j;
+    requires mysql.connector.j; 
 
     opens com.example.keuanganmahasiswa to javafx.fxml;
     opens  com.example.keuanganmahasiswa.model to javafx.base;

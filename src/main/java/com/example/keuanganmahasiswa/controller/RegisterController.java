@@ -1,7 +1,14 @@
 package com.example.keuanganmahasiswa.controller;
 
+import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.ResourceBundle;
+
 import com.example.keuanganmahasiswa.DatabaseConnection;
 import com.example.keuanganmahasiswa.MainApplication;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,16 +16,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-
-import java.io.IOException;
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.time.LocalDateTime;
-import java.util.ResourceBundle;
 
 public class RegisterController implements Initializable {
     @FXML

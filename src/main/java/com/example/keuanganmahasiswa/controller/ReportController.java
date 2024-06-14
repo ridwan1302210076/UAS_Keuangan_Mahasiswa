@@ -1,23 +1,18 @@
 package com.example.keuanganmahasiswa.controller;
 
-import com.example.keuanganmahasiswa.DatabaseConnection;
-import com.example.keuanganmahasiswa.RuntimeConfiguration;
-import com.example.keuanganmahasiswa.model.Transaksi;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
+
+import com.example.keuanganmahasiswa.DatabaseConnection;
+import com.example.keuanganmahasiswa.RuntimeConfiguration;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
 
 public class ReportController implements Initializable {
     DatabaseConnection db = new DatabaseConnection();

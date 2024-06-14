@@ -53,12 +53,12 @@ public class MainController implements Initializable {
 
     private void read() {
         mylist.clear();
-        String query = "select * from transaksi where user_id="+RuntimeConfiguration.getLoginId();
+        String query = "select * from transaksi where userId="+RuntimeConfiguration.getLoginId();
         try {
             Statement statement =  connection.createStatement();
             ResultSet output = statement.executeQuery(query);
             while (output.next()){
-                mylist.add(new Transaksi(output.getInt("id"),output.getInt("user_id"),
+                mylist.add(new Transaksi(output.getInt("id"),output.getInt("userId"),
                         output.getInt("nominal"),output.getString("jenis_transaksi")));
             }
             colNo.setCellFactory(column -> new TableCell<>() {
@@ -119,7 +119,7 @@ public class MainController implements Initializable {
         if((nominal.getText().equals("") && cbTransaksi.getSelectionModel().getSelectedItem().toString().equals(""))==false){
 
             String query = "INSERT INTO transaksi " +
-                    "(user_id,nominal,jenis_transaksi) " +
+                    "(userId,nominal,jenis_transaksi) " +
                     "values (?,?,?)";
             try{
                 PreparedStatement statement = connection.prepareStatement(query);

@@ -1,11 +1,11 @@
 package com.example.keuanganmahasiswa.model;
 
 public class Transaksi {
-    private int id,user_id,nominal;
+    private int id,userId,nominal;
     private String jenis_transaksi;
-    public Transaksi(int id, int user_id, int nominal, String jenis_transaksi) {
+    public Transaksi(int id, int userId, int nominal, String jenis_transaksi) {
         this.id = id;
-        this.user_id = user_id;
+        this.userId = userId;
         this.nominal = nominal;
         this.jenis_transaksi = jenis_transaksi;
     }
@@ -17,12 +17,12 @@ public class Transaksi {
         this.id = id;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public int getNominal() {
@@ -33,11 +33,11 @@ public class Transaksi {
         this.nominal = nominal;
     }
 
-    public String getJenis_transaksi() {
+    public String getJenisTransaksi() {
         return jenis_transaksi;
     }
 
-    public void setJenis_transaksi(String jenis_transaksi) {
+    public void setJenisTransaksi(String jenis_transaksi) {
         this.jenis_transaksi = jenis_transaksi;
     }
 }
